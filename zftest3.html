@@ -1,0 +1,2124 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+```
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>ZERO FEAR | Free Fire Guild</title>
+
+
+<!-- ================= GAMING FONTS ================= -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+>
+
+
+<style>
+
+    /* ==================================================
+       GLOBAL
+    ================================================== */
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+
+    body {
+
+        background:
+            radial-gradient(
+                circle at top left,
+                rgba(255, 0, 60, 0.18),
+                transparent 35%
+            ),
+
+            radial-gradient(
+                circle at bottom right,
+                rgba(0, 100, 255, 0.15),
+                transparent 35%
+            ),
+
+            #050507;
+
+        color: white;
+
+        min-height: 100vh;
+
+        overflow-x: hidden;
+
+        font-family:
+            'Rajdhani',
+            sans-serif;
+
+        letter-spacing: 0.5px;
+    }
+
+
+    /* ==================================================
+       HEADINGS / GAMING TYPOGRAPHY
+    ================================================== */
+
+    h1,
+    h2,
+    h3,
+    .logo,
+    .small-title,
+    .btn,
+    .add-btn,
+    .member-name,
+    footer h2 {
+
+        font-family:
+            'Orbitron',
+            sans-serif;
+
+    }
+
+
+    /* ==================================================
+       NAVBAR
+    ================================================== */
+
+    nav {
+
+        width: 100%;
+
+        height: 75px;
+
+        padding: 0 7%;
+
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+        position: sticky;
+
+        top: 0;
+
+        z-index: 1000;
+
+        background:
+            rgba(5, 5, 7, 0.85);
+
+        backdrop-filter:
+            blur(15px);
+
+        border-bottom:
+            1px solid
+            rgba(255,255,255,0.08);
+    }
+
+
+    .logo {
+
+        font-size: 24px;
+
+        font-weight: 900;
+
+        letter-spacing: 3px;
+    }
+
+
+    .logo span {
+
+        color: #ff174f;
+
+        text-shadow:
+            0 0 15px
+            rgba(255,23,79,0.7);
+    }
+
+
+    nav ul {
+
+        display: flex;
+
+        gap: 35px;
+
+        list-style: none;
+    }
+
+
+    nav a {
+
+        color: #aaa;
+
+        text-decoration: none;
+
+        font-family:
+            'Orbitron',
+            sans-serif;
+
+        font-size: 12px;
+
+        font-weight: 700;
+
+        letter-spacing: 1px;
+
+        transition: 0.3s;
+    }
+
+
+    nav a:hover {
+
+        color: #ff174f;
+
+        text-shadow:
+            0 0 12px
+            rgba(255,23,79,0.7);
+    }
+
+
+    /* ==================================================
+       HERO
+    ================================================== */
+
+    .hero {
+
+        min-height: 90vh;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        text-align: center;
+
+        padding: 80px 20px;
+
+        position: relative;
+
+        overflow: hidden;
+    }
+
+
+    .hero::before {
+
+        content: "";
+
+        position: absolute;
+
+        width: 450px;
+
+        height: 450px;
+
+        background: #ff174f;
+
+        filter: blur(180px);
+
+        opacity: 0.12;
+
+        border-radius: 50%;
+
+        animation:
+            pulseGlow 5s infinite alternate;
+    }
+
+
+    @keyframes pulseGlow {
+
+        from {
+            transform: scale(0.8);
+        }
+
+        to {
+            transform: scale(1.2);
+        }
+
+    }
+
+
+    .hero-content {
+
+        position: relative;
+
+        z-index: 2;
+    }
+
+
+    .small-title {
+
+        color: #ff174f;
+
+        font-size: 13px;
+
+        letter-spacing: 8px;
+
+        font-weight: 700;
+
+        margin-bottom: 25px;
+
+        text-shadow:
+            0 0 15px
+            rgba(255,23,79,0.7);
+    }
+
+
+    .hero h1 {
+
+        font-family:
+            'Orbitron',
+            sans-serif;
+
+        font-size:
+            clamp(55px, 12vw, 140px);
+
+        line-height: 0.9;
+
+        font-weight: 900;
+
+        letter-spacing: -5px;
+
+        background:
+            linear-gradient(
+                90deg,
+                #ffffff,
+                #ff174f,
+                #ffffff
+            );
+
+        background-size: 200%;
+
+        -webkit-background-clip: text;
+
+        color: transparent;
+
+        animation:
+            gradientMove 4s
+            infinite linear;
+
+        filter:
+            drop-shadow(
+                0 0 20px
+                rgba(255,23,79,0.15)
+            );
+    }
+
+
+    @keyframes gradientMove {
+
+        0% {
+            background-position: 0%;
+        }
+
+        100% {
+            background-position: 200%;
+        }
+
+    }
+
+
+    .hero p {
+
+        margin: 30px auto;
+
+        max-width: 600px;
+
+        color: #999;
+
+        font-size: 18px;
+
+        font-weight: 500;
+
+        line-height: 1.7;
+    }
+
+
+    .hero-buttons {
+
+        display: flex;
+
+        justify-content: center;
+
+        gap: 15px;
+
+        flex-wrap: wrap;
+    }
+
+
+    .btn {
+
+        padding:
+            15px 28px;
+
+        border-radius: 6px;
+
+        text-decoration: none;
+
+        font-weight: 700;
+
+        font-size: 12px;
+
+        letter-spacing: 1px;
+
+        transition: 0.3s;
+
+        cursor: pointer;
+
+        border: none;
+    }
+
+
+    .primary {
+
+        background: #ff174f;
+
+        color: white;
+
+        box-shadow:
+            0 0 30px
+            rgba(255,23,79,0.35);
+    }
+
+
+    .primary:hover {
+
+        transform:
+            translateY(-4px);
+
+        box-shadow:
+            0 0 45px
+            rgba(255,23,79,0.65);
+    }
+
+
+    .secondary {
+
+        border:
+            1px solid #333;
+
+        color: white;
+
+        background:
+            rgba(255,255,255,0.04);
+    }
+
+
+    .secondary:hover {
+
+        background:
+            rgba(255,255,255,0.1);
+
+        border-color:
+            #ff174f;
+    }
+
+
+    /* ==================================================
+       STATS
+    ================================================== */
+
+    .stats {
+
+        max-width: 1000px;
+
+        margin: auto;
+
+        padding:
+            30px 20px 80px;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 20px;
+    }
+
+
+    .stat {
+
+        padding: 30px;
+
+        text-align: center;
+
+        background:
+            rgba(255,255,255,0.04);
+
+        border:
+            1px solid
+            rgba(255,255,255,0.08);
+
+        border-radius: 15px;
+
+        backdrop-filter:
+            blur(10px);
+
+        transition: 0.3s;
+    }
+
+
+    .stat:hover {
+
+        transform:
+            translateY(-5px);
+
+        border-color:
+            rgba(255,23,79,0.4);
+    }
+
+
+    .stat h2 {
+
+        color: #ff174f;
+
+        font-size: 35px;
+
+        text-shadow:
+            0 0 15px
+            rgba(255,23,79,0.5);
+    }
+
+
+    .stat p {
+
+        color: #777;
+
+        margin-top: 7px;
+
+        font-weight: 600;
+
+        letter-spacing: 1px;
+    }
+
+
+    /* ==================================================
+       SECTIONS
+    ================================================== */
+
+    .section {
+
+        width: 90%;
+
+        max-width: 1100px;
+
+        margin: auto;
+
+        padding: 80px 0;
+    }
+
+
+    .section-title {
+
+        text-align: center;
+
+        margin-bottom: 45px;
+    }
+
+
+    .section-title h2 {
+
+        font-size: 38px;
+
+        margin-bottom: 12px;
+
+        font-weight: 800;
+
+        letter-spacing: 2px;
+    }
+
+
+    .section-title span {
+
+        color: #ff174f;
+
+        text-shadow:
+            0 0 15px
+            rgba(255,23,79,0.5);
+    }
+
+
+    .section-title p {
+
+        color: #777;
+
+        font-size: 16px;
+
+        font-weight: 600;
+    }
+
+
+    /* ==================================================
+       FORM
+    ================================================== */
+
+    .form-container {
+
+        max-width: 850px;
+
+        margin: auto;
+
+        padding: 35px;
+
+        background:
+            rgba(255,255,255,0.04);
+
+        border:
+            1px solid
+            rgba(255,255,255,0.08);
+
+        border-radius: 18px;
+
+        box-shadow:
+            0 20px 70px
+            rgba(0,0,0,0.4);
+    }
+
+
+    .form-grid {
+
+        display: grid;
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 20px;
+    }
+
+
+    .input-box {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+
+    label {
+
+        color: #aaa;
+
+        font-size: 12px;
+
+        font-weight: 700;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    input,
+    select {
+
+        width: 100%;
+
+        padding: 15px;
+
+        background: #0d0d11;
+
+        color: white;
+
+        border:
+            1px solid #29292f;
+
+        border-radius: 7px;
+
+        outline: none;
+
+        font-family:
+            'Rajdhani',
+            sans-serif;
+
+        font-size: 16px;
+
+        font-weight: 600;
+
+        transition: 0.3s;
+    }
+
+
+    input:focus,
+    select:focus {
+
+        border-color:
+            #ff174f;
+
+        box-shadow:
+            0 0 15px
+            rgba(255,23,79,0.15);
+    }
+
+
+    input::placeholder {
+
+        color: #555;
+    }
+
+
+    .add-btn {
+
+        width: 100%;
+
+        margin-top: 25px;
+
+        padding: 16px;
+
+        border: none;
+
+        border-radius: 7px;
+
+        background:
+            linear-gradient(
+                90deg,
+                #ff174f,
+                #ff003c
+            );
+
+        color: white;
+
+        font-weight: 700;
+
+        font-size: 12px;
+
+        letter-spacing: 1.5px;
+
+        cursor: pointer;
+
+        transition: 0.3s;
+    }
+
+
+    .add-btn:hover {
+
+        transform:
+            translateY(-3px);
+
+        box-shadow:
+            0 10px 30px
+            rgba(255,23,79,0.3);
+    }
+
+
+    /* ==================================================
+       MEMBER SEARCH
+    ================================================== */
+
+    .member-controls {
+
+        display: flex;
+
+        justify-content: center;
+
+        margin-bottom: 40px;
+    }
+
+
+    #search {
+
+        max-width: 500px;
+
+        text-align: left;
+    }
+
+
+    /* ==================================================
+       MEMBER GRID
+    ================================================== */
+
+    .members-grid {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(
+                auto-fit,
+                minmax(280px, 1fr)
+            );
+
+        gap: 25px;
+    }
+
+
+    /* ==================================================
+       MEMBER CARD
+    ================================================== */
+
+    .member-card {
+
+        position: relative;
+
+        padding: 28px;
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(255,255,255,0.08),
+                rgba(255,255,255,0.02)
+            );
+
+        border:
+            1px solid
+            rgba(255,255,255,0.1);
+
+        border-radius: 18px;
+
+        overflow: hidden;
+
+        transition: 0.4s;
+    }
+
+
+    .member-card::before {
+
+        content:
+            "ZERO FEAR";
+
+        position: absolute;
+
+        top: 15px;
+
+        right: -25px;
+
+        font-size: 9px;
+
+        letter-spacing: 2px;
+
+        color:
+            rgba(255,255,255,0.2);
+
+        transform:
+            rotate(90deg);
+
+        font-family:
+            'Orbitron',
+            sans-serif;
+    }
+
+
+    .member-card:hover {
+
+        transform:
+            translateY(-8px);
+
+        border-color:
+            rgba(255,23,79,0.5);
+
+        box-shadow:
+            0 20px 50px
+            rgba(0,0,0,0.5),
+
+            0 0 30px
+            rgba(255,23,79,0.08);
+    }
+
+
+    .member-top {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 15px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .avatar {
+
+        width: 58px;
+
+        height: 58px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        flex-shrink: 0;
+
+        border-radius: 50%;
+
+        background:
+            linear-gradient(
+                135deg,
+                #ff174f,
+                #5b0018
+            );
+
+        font-family:
+            'Orbitron',
+            sans-serif;
+
+        font-size: 21px;
+
+        font-weight: 900;
+
+        box-shadow:
+            0 0 20px
+            rgba(255,23,79,0.25);
+    }
+
+
+    .member-name {
+
+        font-size: 18px;
+
+        font-weight: 700;
+
+        letter-spacing: 1px;
+
+        word-break: break-word;
+    }
+
+
+    .role {
+
+        display: inline-block;
+
+        margin-top: 6px;
+
+        padding:
+            5px 10px;
+
+        border-radius: 20px;
+
+        background:
+            rgba(255,23,79,0.12);
+
+        color: #ff5577;
+
+        font-size: 11px;
+
+        font-weight: 700;
+
+        letter-spacing: 1px;
+    }
+
+
+    .member-info {
+
+        border-top:
+            1px solid
+            rgba(255,255,255,0.08);
+
+        padding-top: 20px;
+    }
+
+
+    .info-row {
+
+        display: flex;
+
+        justify-content:
+            space-between;
+
+        align-items: center;
+
+        gap: 15px;
+
+        margin-bottom: 13px;
+
+        font-size: 14px;
+
+        font-weight: 600;
+    }
+
+
+    .info-row span:first-child {
+
+        color: #666;
+
+        white-space: nowrap;
+
+        letter-spacing: 1px;
+    }
+
+
+    .info-row span:last-child {
+
+        color: #ddd;
+
+        font-weight: 700;
+
+        text-align: right;
+
+        word-break: break-word;
+    }
+
+
+    /* ==================================================
+       PLAYSTYLE
+    ================================================== */
+
+    .playstyle {
+
+        display:
+            inline-flex;
+
+        align-items: center;
+
+        gap: 5px;
+
+        padding:
+            5px 10px;
+
+        border-radius: 20px;
+
+        background:
+            rgba(255,255,255,0.06);
+
+        border:
+            1px solid
+            rgba(255,255,255,0.08);
+
+        font-size: 12px;
+    }
+
+
+    /* ==================================================
+       DELETE
+    ================================================== */
+
+    .delete-btn {
+
+        width: 100%;
+
+        margin-top: 15px;
+
+        padding: 10px;
+
+        border:
+            1px solid
+            rgba(255,255,255,0.1);
+
+        border-radius: 7px;
+
+        background: transparent;
+
+        color: #888;
+
+        cursor: pointer;
+
+        font-family:
+            'Orbitron',
+            sans-serif;
+
+        font-size: 10px;
+
+        font-weight: 700;
+
+        letter-spacing: 1px;
+
+        transition: 0.3s;
+    }
+
+
+    .delete-btn:hover {
+
+        background:
+            rgba(255,0,50,0.1);
+
+        color: #ff4569;
+
+        border-color:
+            #ff4569;
+    }
+
+
+    /* ==================================================
+       FOOTER
+    ================================================== */
+
+    footer {
+
+        margin-top: 80px;
+
+        padding: 50px 20px;
+
+        text-align: center;
+
+        border-top:
+            1px solid
+            rgba(255,255,255,0.08);
+
+        background:
+            rgba(0,0,0,0.3);
+    }
+
+
+    footer h2 {
+
+        letter-spacing: 5px;
+
+        font-weight: 900;
+    }
+
+
+    footer h2 span {
+
+        color: #ff174f;
+    }
+
+
+    footer p {
+
+        margin-top: 12px;
+
+        color: #666;
+
+        font-size: 14px;
+
+        font-weight: 600;
+
+        letter-spacing: 1px;
+    }
+
+
+    /* ==================================================
+       MOBILE
+    ================================================== */
+
+    @media (max-width: 700px) {
+
+        nav {
+
+            padding: 0 20px;
+        }
+
+
+        nav ul {
+
+            display: none;
+        }
+
+
+        .hero {
+
+            min-height: 80vh;
+        }
+
+
+        .hero h1 {
+
+            letter-spacing:
+                -3px;
+        }
+
+
+        .stats {
+
+            grid-template-columns:
+                1fr;
+        }
+
+
+        .form-grid {
+
+            grid-template-columns:
+                1fr;
+        }
+
+
+        .form-container {
+
+            padding: 22px;
+        }
+
+
+        .section-title h2 {
+
+            font-size: 30px;
+        }
+
+
+        .info-row {
+
+            align-items:
+                flex-start;
+        }
+
+
+        .member-name {
+
+            font-size: 16px;
+        }
+
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- ==================================================
+     NAVBAR
+================================================== -->
+
+<nav>
+
+    <div class="logo">
+
+        ZERO <span>FEAR</span>
+
+    </div>
+
+
+    <ul>
+
+        <li>
+            <a href="#home">
+                HOME
+            </a>
+        </li>
+
+        <li>
+            <a href="#join">
+                JOIN
+            </a>
+        </li>
+
+        <li>
+            <a href="#members">
+                MEMBERS
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- ==================================================
+     HERO
+================================================== -->
+
+<section
+    class="hero"
+    id="home"
+>
+
+    <div class="hero-content">
+
+        <div class="small-title">
+
+            FREE FIRE GUILD
+
+        </div>
+
+
+        <h1>
+
+            ZERO<br>FEAR
+
+        </h1>
+
+
+        <p>
+
+            We don't play to survive.
+            We play to dominate.
+            Welcome to the official
+            ZERO FEAR guild.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a
+                href="#join"
+                class="btn primary"
+            >
+
+                JOIN THE GUILD
+
+            </a>
+
+
+            <a
+                href="#members"
+                class="btn secondary"
+            >
+
+                VIEW MEMBERS
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     STATS
+================================================== -->
+
+<section class="stats">
+
+
+    <div class="stat">
+
+        <h2 id="memberCount">
+            0
+        </h2>
+
+        <p>
+            GUILD MEMBERS
+        </p>
+
+    </div>
+
+
+    <div class="stat">
+
+        <h2>
+            FF
+        </h2>
+
+        <p>
+            GAME
+        </p>
+
+    </div>
+
+
+    <div class="stat">
+
+        <h2>
+            ∞
+        </h2>
+
+        <p>
+            FEAR LEVEL
+        </p>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ==================================================
+     ADD MEMBER
+================================================== -->
+
+<section
+    class="section"
+    id="join"
+>
+
+
+    <div class="section-title">
+
+        <h2>
+
+            ADD <span>MEMBER</span>
+
+        </h2>
+
+
+        <p>
+
+            REGISTER A NEW ZERO FEAR WARRIOR
+
+        </p>
+
+    </div>
+
+
+
+    <div class="form-container">
+
+
+        <form id="memberForm">
+
+
+            <div class="form-grid">
+
+
+                <!-- USERNAME -->
+
+                <div class="input-box">
+
+                    <label>
+                        FREE FIRE USERNAME
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Enter username"
+                        maxlength="30"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- UID -->
+
+                <div class="input-box">
+
+                    <label>
+                        FREE FIRE UID
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="uid"
+                        placeholder="Enter Free Fire UID"
+                        maxlength="20"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- ROLE -->
+
+                <div class="input-box">
+
+                    <label>
+                        GUILD ROLE
+                    </label>
+
+
+                    <select id="role">
+
+                        <option value="Member">
+                            Member
+                        </option>
+
+                        <option value="Elite Member">
+                            Elite Member
+                        </option>
+
+                        <option value="Officer">
+                            Officer
+                        </option>
+
+                        <option value="Co-Leader">
+                            Co-Leader
+                        </option>
+
+                        <option value="Leader">
+                            Leader
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- PLAYSTYLE -->
+
+                <div class="input-box">
+
+                    <label>
+                        PLAYSTYLE
+                    </label>
+
+
+                    <select id="playstyle">
+
+                        <option value="Sniper">
+                            🎯 Sniper
+                        </option>
+
+                        <option value="Rusher">
+                            ⚡ Rusher
+                        </option>
+
+                        <option value="Supporter">
+                            🛡️ Supporter
+                        </option>
+
+                        <option value="Camper">
+                            🏕️ Camper
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+            </div>
+
+
+
+            <button
+                type="submit"
+                class="add-btn"
+            >
+
+                + ADD TO ZERO FEAR
+
+            </button>
+
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     MEMBERS
+================================================== -->
+
+<section
+    class="section"
+    id="members"
+>
+
+
+    <div class="section-title">
+
+        <h2>
+
+            ZERO FEAR <span>ROSTER</span>
+
+        </h2>
+
+
+        <p>
+
+            OUR WARRIORS. OUR GUILD. OUR LEGACY.
+
+        </p>
+
+    </div>
+
+
+
+    <!-- SEARCH -->
+
+    <div class="member-controls">
+
+        <input
+            type="text"
+            id="search"
+            placeholder="🔍 Search username or UID..."
+        >
+
+    </div>
+
+
+
+    <!-- MEMBER CARDS -->
+
+    <div
+        class="members-grid"
+        id="membersGrid"
+    ></div>
+
+
+</section>
+
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
+<footer>
+
+
+    <h2>
+
+        ZERO <span>FEAR</span>
+
+    </h2>
+
+
+    <p>
+
+        NO FEAR. NO LIMITS. ONLY VICTORY.
+
+    </p>
+
+
+    <p>
+
+        © 2026 ZERO FEAR GUILD
+
+    </p>
+
+
+</footer>
+
+
+
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
+
+<script>
+
+
+    /* ================= STORAGE ================= */
+
+    let members =
+
+        JSON.parse(
+
+            localStorage.getItem(
+                "zeroFearMembers"
+            )
+
+        ) || [];
+
+
+
+    const form =
+
+        document.getElementById(
+            "memberForm"
+        );
+
+
+    const membersGrid =
+
+        document.getElementById(
+            "membersGrid"
+        );
+
+
+    const memberCount =
+
+        document.getElementById(
+            "memberCount"
+        );
+
+
+    const search =
+
+        document.getElementById(
+            "search"
+        );
+
+
+
+    /* ================= SAVE ================= */
+
+    function saveMembers() {
+
+        localStorage.setItem(
+
+            "zeroFearMembers",
+
+            JSON.stringify(
+                members
+            )
+
+        );
+
+    }
+
+
+
+    /* ================= PLAYSTYLE ICON ================= */
+
+    function getPlaystyleIcon(
+        playstyle
+    ) {
+
+        switch(playstyle) {
+
+            case "Sniper":
+                return "🎯";
+
+            case "Rusher":
+                return "⚡";
+
+            case "Supporter":
+                return "🛡️";
+
+            case "Camper":
+                return "🏕️";
+
+            default:
+                return "🎮";
+
+        }
+
+    }
+
+
+
+    /* ================= DISPLAY MEMBERS ================= */
+
+    function displayMembers(
+        filter = ""
+    ) {
+
+
+        membersGrid.innerHTML = "";
+
+
+        const filteredMembers =
+
+            members.filter(
+                member =>
+
+                    member.username
+                        .toLowerCase()
+                        .includes(
+                            filter.toLowerCase()
+                        )
+
+                    ||
+
+                    member.uid
+                        .toLowerCase()
+                        .includes(
+                            filter.toLowerCase()
+                        )
+
+                    ||
+
+                    (
+                        member.playstyle &&
+
+                        member.playstyle
+                            .toLowerCase()
+                            .includes(
+                                filter.toLowerCase()
+                            )
+                    )
+
+            );
+
+
+
+        filteredMembers.forEach(
+            member => {
+
+
+                const card =
+
+                    document.createElement(
+                        "div"
+                    );
+
+
+                card.className =
+                    "member-card";
+
+
+
+                const firstLetter =
+
+                    member.username
+                        .charAt(0)
+                        .toUpperCase();
+
+
+
+                /*
+                    Compatibility for
+                    old members.
+                */
+
+                const currentPlaystyle =
+
+                    member.playstyle ||
+                    "Member";
+
+
+
+                card.innerHTML = `
+
+                    <div class="member-top">
+
+                        <div class="avatar">
+
+                            ${firstLetter}
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="member-name">
+
+                                ${escapeHTML(
+                                    member.username
+                                )}
+
+                            </div>
+
+
+                            <div class="role">
+
+                                ${escapeHTML(
+                                    member.role
+                                )}
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="member-info">
+
+
+                        <div class="info-row">
+
+                            <span>
+                                FREE FIRE UID
+                            </span>
+
+
+                            <span>
+
+                                ${escapeHTML(
+                                    member.uid
+                                )}
+
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="info-row">
+
+                            <span>
+                                PLAYSTYLE
+                            </span>
+
+
+                            <span class="playstyle">
+
+                                ${getPlaystyleIcon(
+                                    currentPlaystyle
+                                )}
+
+                                ${escapeHTML(
+                                    currentPlaystyle
+                                )}
+
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="info-row">
+
+                            <span>
+                                STATUS
+                            </span>
+
+
+                            <span>
+
+                                ● ACTIVE
+
+                            </span>
+
+                        </div>
+
+
+
+                        <button
+                            class="delete-btn"
+                            onclick="deleteMember(
+                                ${members.indexOf(member)}
+                            )"
+                        >
+
+                            REMOVE MEMBER
+
+                        </button>
+
+
+                    </div>
+
+                `;
+
+
+
+                membersGrid.appendChild(
+                    card
+                );
+
+            }
+        );
+
+
+
+        memberCount.textContent =
+            members.length;
+
+    }
+
+
+
+    /* ================= ADD MEMBER ================= */
+
+    form.addEventListener(
+        "submit",
+        function(event) {
+
+
+            event.preventDefault();
+
+
+
+            const username =
+
+                document
+                    .getElementById(
+                        "username"
+                    )
+                    .value
+                    .trim();
+
+
+
+            const uid =
+
+                document
+                    .getElementById(
+                        "uid"
+                    )
+                    .value
+                    .trim();
+
+
+
+            const role =
+
+                document
+                    .getElementById(
+                        "role"
+                    )
+                    .value;
+
+
+
+            const playstyle =
+
+                document
+                    .getElementById(
+                        "playstyle"
+                    )
+                    .value;
+
+
+
+            if (
+                !username ||
+                !uid
+            ) {
+
+                return;
+
+            }
+
+
+
+            /* DUPLICATE UID */
+
+            const alreadyExists =
+
+                members.some(
+
+                    member =>
+                        member.uid === uid
+
+                );
+
+
+
+            if (alreadyExists) {
+
+                alert(
+                    "This UID is already registered in ZERO FEAR!"
+                );
+
+                return;
+
+            }
+
+
+
+            /* CREATE MEMBER */
+
+            members.push({
+
+                username:
+                    username,
+
+                uid:
+                    uid,
+
+                role:
+                    role,
+
+                playstyle:
+                    playstyle
+
+            });
+
+
+
+            saveMembers();
+
+
+            displayMembers();
+
+
+            form.reset();
+
+
+
+            /* SCROLL */
+
+            document
+                .getElementById(
+                    "members"
+                )
+                .scrollIntoView({
+
+                    behavior:
+                        "smooth"
+
+                });
+
+        }
+    );
+
+
+
+    /* ================= DELETE MEMBER ================= */
+
+    function deleteMember(
+        index
+    ) {
+
+
+        const confirmDelete =
+
+            confirm(
+                "Remove this member from ZERO FEAR?"
+            );
+
+
+
+        if (!confirmDelete) {
+
+            return;
+
+        }
+
+
+
+        members.splice(
+            index,
+            1
+        );
+
+
+        saveMembers();
+
+
+        displayMembers(
+            search.value
+        );
+
+    }
+
+
+
+    /* ================= SEARCH ================= */
+
+    search.addEventListener(
+        "input",
+        function() {
+
+            displayMembers(
+                search.value
+            );
+
+        }
+    );
+
+
+
+    /* ================= SECURITY ================= */
+
+    function escapeHTML(
+        text
+    ) {
+
+
+        const div =
+
+            document.createElement(
+                "div"
+            );
+
+
+        div.textContent =
+            text;
+
+
+        return div.innerHTML;
+
+    }
+
+
+
+    /* ================= INITIAL LOAD ================= */
+
+    displayMembers();
+
+
+</script>
+```
+
+</body>
+
+</html>
